@@ -45,6 +45,9 @@ class Team:
 	def setName(self, name):
 		self.name = name
 
+	def getName(self):
+		return self.name
+
 Niklas = Player()
 Tobbe = Player()
 Mackan = Player()
@@ -119,8 +122,8 @@ for i in range(4):
 printing("\nThe teams are the following: ")
 
 i = 1
-for item in teams:
-	printing("Lag " + str(i) + ": " + item.firstPlayer.name + " " + item.secondPlayer.name)
+for team in teams:
+	printing(team.name + ": " + team.firstPlayer.name + " " + team.secondPlayer.name)
 	i += 1
 
 raw_input("\nPress enter to randomize tee times:")
